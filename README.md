@@ -13,11 +13,26 @@ Results: Using images and examples of your code, compare the stock performance b
 ## 2017 Stock Performance
 -Overall good performance, most stocks were in the green
 
+<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2017_Results.PNG>
+
 ## 2018 Stock Performance
 -Overall poor performance, most stocks were in the red
 
-## Code Execution Time
+<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2018_Results.PNG.jpg>
+
+## Code Execution Times
 -Refactored code was faster by X amount
+
+### Original Code Times
+<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/Green_Book_2017.PNG>
+
+<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/Green_Book_2018.PNG>
+
+### Refactored Code Times
+<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2017.PNG>
+
+<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2018.PNG>
+
 
 # Summary
 
