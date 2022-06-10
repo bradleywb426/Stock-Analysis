@@ -11,15 +11,19 @@ Steve's parents are interested in investing in stocks for green energy companies
 Results: Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script.
 
 ## 2017 Stock Performance
+-Overall good performance, most stocks were in the green
 
 ## 2018 Stock Performance
+-Overall poor performance, most stocks were in the red
 
 ## Code Execution Time
+-Refactored code was faster by X amount
 
 # Summary
 
 Summary: In a summary statement, address the following questions.
 
 -What are the advantages or disadvantages of refactoring code?
+  - ADV: simpifies and speeds code
 
 -How do these pros and cons apply to refactoring the original VBA script?
