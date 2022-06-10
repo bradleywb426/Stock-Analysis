@@ -10,6 +10,12 @@ Steve's parents are interested in investing in stocks for green energy companies
 
 Results: Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script.
 
+## 2017 Stock Performance
+
+## 2018 Stock Performance
+
+## Code Execution Time
+
 # Summary
 
 Summary: In a summary statement, address the following questions.
