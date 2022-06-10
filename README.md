@@ -13,10 +13,14 @@ Results: Using images and examples of your code, compare the stock performance b
 ## 2017 Stock Performance
 -Overall good performance, most stocks were in the green
 
+In 2017, most stocks had increases in yearly returns. Some stocks, like DAQO, had returns of almost 200%, while only TERP had a negative return.
+
 <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2017_Results.PNG>
 
 ## 2018 Stock Performance
 -Overall poor performance, most stocks were in the red
+
+In 2018, most stocks had negative yearly returns. In fact, only two stocks had postive returns, ENPH and RUN, both of which had around 80% returns.
 
 <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2018_Results.PNG.jpg>
 
