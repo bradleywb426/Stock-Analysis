@@ -26,18 +26,13 @@ In 2018, most stocks had negative yearly returns. In fact, only two stocks had p
 
 The orignal code for the Stock analyses performed the analyses relatively quickly. The data for both 2017 and 2018 was analyzed in around .77 seconds. 
 
-<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/Green_Book_2017.PNG width=375>
-
-<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/Green_Book_2018.PNG>
+<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/Green_Book_2017.PNG width=375> <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/Green_Book_2018.PNG>
 
 ### Refactored Code Times
 
 The refactored code ran far faster, with each year being both analyzed and formatted in .15625 seconds. The refactored code shaved around .6 seconds off from the original code. 
 
-<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2017.PNG>
-
-<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2018.PNG>
-
+<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2017.PNG> <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2018.PNG>
 
 # Summary
 
