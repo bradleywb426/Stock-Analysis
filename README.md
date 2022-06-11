@@ -11,16 +11,14 @@ Steve's parents are interested in investing in stocks for green energy companies
 Results: Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script.
 
 ## 2017 Stock Performance
--Overall good performance, most stocks were in the green
 
-In 2017, most stocks had increases in yearly returns. Some stocks, like DAQO, had returns of almost 200%, while only TERP had a negative return.
+In 2017, most stocks had increases in yearly returns. Some stocks, like DAQO, had returns of almost 200%, while only TERP had a negative return. Most stocks appear to be good investments based on the 2017 data, particularly DAQO given the large increase on returns. However, trends from the 2018 data show a different story.
 
 <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2017_Results.PNG>
 
 ## 2018 Stock Performance
--Overall poor performance, most stocks were in the red
 
-In 2018, most stocks had negative yearly returns. In fact, only two stocks had postive returns, ENPH and RUN, both of which had around 80% returns.
+In 2018, most stocks had negative yearly returns. In fact, only two stocks had postive returns, ENPH and RUN, both of which had around 80% returns. This implies that both stocks may be good investments with consitent returns. Some of the stocks with small negative returns, like VSLR, may be also good investments with the occasional small dip in returns. One of the most notable negative returns is TERP, which has had relatively consistent negative returns for 2017 and 2018. 
 
 <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2018_Results.PNG.jpg>
 
