@@ -4,7 +4,7 @@ Analysis of a selection of stack data from 2017 and 2018 to investigate investme
 
 # Overview
 
-Steve's parents are interested in investing in stocks for green energy companies, specifically *DAQO New Energy Corp*. Steve is also looking to diversify his parents investments in other green energy companies. After creating end-user friendly analyses for DAQO stocks as well as the other stocks for the two years of data, Steve is looking to expand the dataset to more stocks over more years. This requires a refactoring of the VBA code to be faster, clearer, and more efficient (as detailed below).
+Steve's parents are interested in investing in stocks for green energy companies, specifically *DAQO New Energy Corp* or DQ. Steve is also looking to diversify his parents investments in other green energy companies. After creating end-user friendly analyses for stocks of DQ and other green energy companies with two years of data, Steve is looking to expand the dataset to include more stocks over more years. This requires a refactoring of the VBA code to be faster, clearer, and more efficient when it analyizes far more data.
 
 # Results
 
@@ -53,3 +53,7 @@ Summary: In a summary statement, address the following questions.
   - DIS: not always effective
 
 -How do these pros and cons apply to refactoring the original VBA script?
+  - the code was easier to read
+  - the code ran faster and also formatted
+  - it took additional time to rewrite the code
+  - refactoring the code proved mildly frustrating
