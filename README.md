@@ -8,7 +8,7 @@ Steve's parents are interested in investing in stocks for green energy companies
 
 # Results
 
-## Stock Performaces
+## Stock Performances
 
 ### 2017 Stock Performance
 
@@ -18,7 +18,7 @@ In 2017, most stocks had increases in yearly returns. Some stocks, like DAQO, ha
 
 ### 2018 Stock Performance
 
-In 2018, most stocks had negative yearly returns. In fact, only two stocks had postive returns, ENPH and RUN, both of which had around +80% returns. This implies that both stocks may be good investments with consitent returns. Some of the stocks with small negative returns, like VSLR, may be also good investments with the occasional small dip in returns. One of the most notable negative returns is TERP, which has had relatively consistent negative returns for 2017 and 2018. 
+In 2018, most stocks had negative yearly returns. In fact, only two stocks had postive returns, ENPH and RUN, both of which had around +80% returns. Given the consecutive years of positive returns, this implies that both stocks may be good investments that provide consistent returns. Some of the stocks with small negative returns, like VSLR, may be also good investments in the long run that had a small decrease in returns, but more data would be required to properly make such assumptions. One of the most notable negative returns is TERP, which has had relatively consistent negative returns for 2017 and 2018, and is likely a company on the decline. 
 
 <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2018_Results.PNG.jpg>
 
@@ -26,34 +26,74 @@ In 2018, most stocks had negative yearly returns. In fact, only two stocks had p
 
 ### Original Code Times
 
-The orignal code for the Stock analyses performed the analyses relatively quickly. The data for both 2017 and 2018 was analyzed in around .77 seconds. 
+The orignal code for the Stock analyses performed the analyses relatively quickly. The data for both 2017 and 2018 was analyzed in around .77 seconds, which is sufficiently fast for this data set. However, the original code would have noticably lagged when applied to potential larger data sets. 
 
 <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/Green_Book_2017.PNG width=375> <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/Green_Book_2018.PNG>
 
 ### Refactored Code Times
 
-The refactored code ran far faster, with each year being both analyzed and formatted in .15625 seconds. The refactored code shaved around .6 seconds off from the original code. 
+The refactored code ran far faster, with each year being both analyzed and formatted in .15625 seconds. The refactored code shaved around .6 seconds off from the original code, a major improvement from the original and would likely perform far better than the original when applied to larger data sets. 
 
 <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2017.PNG> <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2018.PNG>
 
 ## Refactored Code
 
-There were several key differences between the original code and the refactored code that improved the analysis performance. One of the primary changes was the creation of the ticker index. This index is used to refer to specific tickers in the arrays for tickers, volume, and starting and ending prices, and later used to populate the Results chart with the correct data for respective tickers. This reduces the processing time by combing through each bit of data once, and creating a condition to change the index when appropriate. The creation of arrays for the volume and prices also saves time by not having to update/write the values for each part after checking each cell with each ticker, instead the desired values are simply saved into an array to be pulled from later.
+### Ticker Index
+
+There were several key differences between the original code and the refactored code that improved the analysis performance. One of the primary changes was the creation of the ticker index (See code 1A) to refer to specific tickers in the arrays for tickers, ticker volumes, and starting and ending prices. This index is akin to the tickers, but is coded to automatically increase in value with each new ticker (See code 1B) so as to not mix data. The use of the tickerIndex also negates the use of a nested loop, which slowed the original code by combing the data several times as it checked each cell for each ticker. Note that the code in the following section and in future sections are taken out of order to show specific lines:
+```
+1A)
+Dim tickerIndex As Single
+    tickerIndex = 0
+    
+...
+    
+1B)
+If Cells(i + 1, 1).Value <> Cells(i, 1).Value Then
+    tickerIndex = tickerIndex + 1
+End If
+```
+Code 1A creates the variable "tickerIndex" and initializes it to zero. Code 1B then checks if the value in the current cell of the first column, Cells(i,1).Value, equals the value of the next cell in the first column, Cells(i+1,1).Value, and the i is from the for loop this condition is nested in, in which i = 0 to 11. If the value of the cells is equal, then the code moves onto the next cell and checks all current conditions for that cell. However, if the values do not match, then the tickerIndex is increased by one and the conditions are checked for that next cell.
+
+### Other Arrays
+
+This index was used to store data in three arrays (See code 2A): ticker volumes, ticker starting prices, and ticker ending prices. Storing data in these arraysusing conditionals (See code 2B) allows the code to be parsed quicker as it does not have to check to print and then print data for each cell after checking each ticker. Instead, data can be pulled from the array at a later time to populate a table (see code 2C).
+```
+2A)
+Dim tickerVolumes(12) As Long
+Dim tickerStartingPrices(12) As Single
+Dim tickerEndingPrices(12) As Single
+
+2B)
+tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+
+If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+    tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+End If
+
+If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+    tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+End If
+
+2C)
+For i = 0 To 11   
+        Worksheets("All Stocks Analysis").Activate
+        tickerIndex = i
+        Cells(4 + i, 1).Value = tickers(tickerIndex)
+        Cells(4 + i, 2).Value = tickerVolumes(tickerIndex)
+        Cells(4 + i, 3).Value = (tickerEndingPrices(tickerIndex) / tickerStartingPrices(tickerIndex)) - 1
+Next i
+```
+Code 2A creates arrays of 12 empty values that are populated later. Code 2B has three parts, the first of which adds the volume of the current row of cells to the total volumes for the current ticker based on the tickerIndex value. Then the code checks if the previous cell is the first cell of a ticker by checking if the ticker value (based on the tickerIndex) of the previous cell, Cells(i-1, 1).Value, equals the ticker value of the current cell, Cells(i, 1).Value. If the current cell is the first cell of a ticker, then the starting price is recorded into the tickerStartingPrices array for the tickerIndex Value. If the cell is not the first cell for the ticker, then this condition is skipped. The same general process is follwoed for the tickerEndingPrices array, where the code checks to see if the current cell is the last cell for a ticker, Cells(i+1, 1)>Value, and if it is, copying that value into the array. Lastly, Code 2C does a quick for loop to add the values stored in the aforementoned arrays to a table created in one of the sheets.
+
+To view the code and sheet in context and as a whole, please go to the Excel file: [VBA Challenge](https://github.com/bradleywb426/stock-analysis/blob/main/VBA_Challenge.xlsm).
 
 # Summary
 
-Summary: In a summary statement, address the following questions.
+### Pros and Cons of Refactoring
 
--What are the advantages or disadvantages of refactoring code?
-  - ADV: simpifies and speeds code
-  - ADV: improved readability
-  - ADV: fixes missed errors
-  - DIS: can be frustrating
-  - DIS: takes extra time
-  - DIS: not always effective
+Refactoring codes can be a very useful skill to possess, but refactoring itself has many pros and cons to it. Refactoring code oftens simplifies it, allowing for code that can run faster and be more easily understood (especially when the code has comments in it). Refactored code can often also fix unseen errors or complications in the code that were missed before. On the other hand, refactoring takes extra time to make work, and depending on the original code and the project can require a rather large amount of time. Refactoring can also be frustrating, largely in part of the extra time needed but also in the search of how to simpilfy the code. Refactoring code is not always a guranteed large improvement as some code can not be improved much further despite spending a lot of time and effort on it.  
 
--How do these pros and cons apply to refactoring the original VBA script?
-  - the code was easier to read
-  - the code ran faster and also formatted
-  - it took additional time to rewrite the code
-  - refactoring the code proved mildly frustrating
+### How This Applies to the Refactored Code Here
+
+The pros and cons discussed above can be applied to the refactoring of the original VBA script for this project. After refactoring, the code became easier to read and ran faster than the original code while also formatting the table created with the code. The process of refactoring took extra time to accomplish, however, and troubleshooting the refactoring process also proved mildly frustrating at times.
