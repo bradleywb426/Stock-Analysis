@@ -4,9 +4,12 @@ Analysis of a selection of stack data from 2017 and 2018 to investigate investme
 
 # Overview
 
-Steve's parents are interested in investing in stocks for green energy companies, specifically *DAQO New Energy Corp*. Steve is also looking to diversify his parents investments in other green energy companies. After creating end-user friendly analyses for DAQO stocks as well as the other stocks for the two years of data, Steve is looking to expand the dataset to more stocks over more years. This requires a refactoring of the VBA code to be faster, clearer, and more efficient, as detailed below.
+Steve's parents are interested in investing in stocks for green energy companies, specifically *DAQO New Energy Corp*. Steve is also looking to diversify his parents investments in other green energy companies. After creating end-user friendly analyses for DAQO stocks as well as the other stocks for the two years of data, Steve is looking to expand the dataset to more stocks over more years. This requires a refactoring of the VBA code to be faster, clearer, and more efficient (as detailed below).
 
 # Results
+
+## Refactored Code
+Show what makes the code refactored and better
 
 ## 2017 Stock Performance
 
