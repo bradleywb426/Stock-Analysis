@@ -8,16 +8,15 @@ Steve's parents are interested in investing in stocks for green energy companies
 
 # Results
 
-## Refactored Code
-Show what makes the code refactored and better
+## Stock Performaces
 
-## 2017 Stock Performance
+### 2017 Stock Performance
 
 In 2017, most stocks had increases in yearly returns. Some stocks, like DAQO, had returns of almost +200%, while RUN only has returns of around +6%. Only TERP had a negative return, which was around -7%. Most stocks appear to be good investments based on the 2017 data, particularly DAQO given the large increase on returns. However, trends from the 2018 data show a different story.
 
 <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2017_Results.PNG>
 
-## 2018 Stock Performance
+### 2018 Stock Performance
 
 In 2018, most stocks had negative yearly returns. In fact, only two stocks had postive returns, ENPH and RUN, both of which had around +80% returns. This implies that both stocks may be good investments with consitent returns. Some of the stocks with small negative returns, like VSLR, may be also good investments with the occasional small dip in returns. One of the most notable negative returns is TERP, which has had relatively consistent negative returns for 2017 and 2018. 
 
@@ -36,6 +35,10 @@ The orignal code for the Stock analyses performed the analyses relatively quickl
 The refactored code ran far faster, with each year being both analyzed and formatted in .15625 seconds. The refactored code shaved around .6 seconds off from the original code. 
 
 <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2017.PNG> <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2018.PNG>
+
+## Refactored Code
+
+There were several key differences between the original code and the refactored code that improved the analysis performance. One of the primary changes was the creation of the ticker index. This index is used to refer to specific tickers in the arrays for tickers, volume, and starting and ending prices, and later used to populate the Results chart with the correct data for respective tickers. This reduces the processing time by combing through each bit of data once, and creating a condition to change the index when appropriate. The creation of arrays for the volume and prices also saves time by not having to update/write the values for each part after checking each cell with each ticker, instead the desired values are simply saved into an array to be pulled from later.
 
 # Summary
 
