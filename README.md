@@ -46,5 +46,10 @@ Summary: In a summary statement, address the following questions.
 
 -What are the advantages or disadvantages of refactoring code?
   - ADV: simpifies and speeds code
+  - ADV: improved readability
+  - ADV: fixes missed errors
+  - DIS: can be frustrating
+  - DIS: takes extra time
+  - DIS: not always effective
 
 -How do these pros and cons apply to refactoring the original VBA script?
