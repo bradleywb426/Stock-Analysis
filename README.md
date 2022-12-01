@@ -14,13 +14,17 @@ Steve's parents are interested in investing in stocks for green energy companies
 
 In 2017, most stocks had increases in yearly returns. Some stocks, like DAQO, had returns of almost +200%, while RUN only has returns of around +6%. Only TERP had a negative return, which was around -7%. Most stocks appear to be good investments based on the 2017 data, particularly DAQO given the large increase in returns. However, trends from the 2018 data show a different story.
 
-<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2017_Results.PNG>
+<p align="center">
+<img src="https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2017_Results.PNG" alt="2017 Stock Analysis Results">
+</p>
 
 ### 2018 Stock Performance
 
 In 2018, most stocks had negative yearly returns. In fact, only two stocks had positive returns, ENPH and RUN, both of which had around +80% returns. Given the consecutive years of positive returns, this implies that both stocks may be good investments that provide consistent returns. Some of the stocks with small negative returns, like VSLR, maybe also be good investments in the long run that had a small decrease in returns, but more data would be required to properly make such assumptions. One of the most notable negative returns is TERP, which has had relatively consistent negative returns for 2017 and 2018 and is likely a company on the decline. 
 
-<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2018_Results.PNG.jpg>
+<p align="center">
+<img src="https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2018_Results.PNG.jpg" alt="2018 Stock Analysis Results">
+</p>
 
 ## Code Execution Times
 
@@ -28,13 +32,17 @@ In 2018, most stocks had negative yearly returns. In fact, only two stocks had p
 
 The original code for the Stock analyses performed the analyses relatively quickly. The data for both 2017 and 2018 was analyzed in around .77 seconds, which is sufficiently fast for this data set. However, the original code would have noticeably lagged when applied to potential larger data sets. 
 
-<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/Green_Book_2017.PNG width=375> <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/Green_Book_2018.PNG>
+
+<p align="center"> <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/Green_Book_2017.PNG alt="2017 Analysis Elapsed Time" width="378"> <img src="https://github.com/bradleywb426/stock-analysis/blob/main/Resources/Green_Book_2018.PNG" alt="2018 Analysis Elapsed Time"> </p>
+
 
 ### Refactored Code Times
 
 The refactored code ran far faster than the original, with each year being both analyzed and formatted in .15625 seconds. The refactored code shaved around .6 seconds off from the original code, a major improvement from the original, and would likely perform far better than the original when applied to larger data sets. 
 
-<img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2017.PNG> <img src=https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2018.PNG>
+<p align="center">
+<img src="https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2017.PNG" alt="2017 Refactored Analysis Elapsed Time" width="363"> <img src="https://github.com/bradleywb426/stock-analysis/blob/main/Resources/VBA_Challenge_2018.PNG" alt="2018 Refactored Analysis Elapsed Time" width="370">
+</p>
 
 ## Refactored Code
 
